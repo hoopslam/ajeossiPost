@@ -49,3 +49,11 @@ export const getPostsFromToQuery = (from: number, to: number) => groq`
         categories[]->
     }
 `;
+
+export const getInitialPosts = (excludeId: string) => groq`
+    *[_type=='post' && _id != '${excludeId}'] | order(_createdAt desc) [ 0...4] {
+        ...,
+        author->,
+        categories[]->
+    }
+`;

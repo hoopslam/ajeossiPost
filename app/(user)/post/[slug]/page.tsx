@@ -41,27 +41,25 @@ async function Post({ params: { slug } }: Props) {
                     />
                 </div>
             </section>
-            <section className='flex flex-col items-start justify-center w-full'>
+            <section className='flex flex-col items-center justify-between w-full sm:flex-row'>
                 <AuthorCard
                     name={post.author.name}
                     profileImage={urlFor(post.author.image).url()}
                     postDate={post._createdAt}
                 />
-                <div className='flex justify-between items-center w-full py-5'>
-                    <h1 className='text-4xl font-extrabold'>{post.title}</h1>
-                    <div className='flex flex-wrap w-full max-w-xs justify-end'>
-                        {post.categories?.slice(0, 6).map((category) => (
-                            <ChipButton
-                                key={category._id}
-                                size={ChipSize.small}
-                                color={ChipColor.gray}
-                            >
-                                {`# ${category.title}`}
-                            </ChipButton>
-                        ))}
-                    </div>
+                <div className='flex flex-wrap w-full max-w-xs justify-end'>
+                    {post.categories?.slice(0, 6).map((category) => (
+                        <ChipButton
+                            key={category._id}
+                            size={ChipSize.small}
+                            color={ChipColor.gray}
+                        >
+                            {`# ${category.title}`}
+                        </ChipButton>
+                    ))}
                 </div>
             </section>
+            <h1 className='text-4xl font-extrabold my-5'>{post.title}</h1>
 
             <PortableText
                 value={post.body}

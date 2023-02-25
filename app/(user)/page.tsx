@@ -1,6 +1,7 @@
 import { previewData } from 'next/headers';
 import {
     featuredPostQuery,
+    getInitialPosts,
     getPostsFromToQuery,
     totalPosts,
 } from '../../groq/queries';
@@ -24,9 +25,9 @@ export default async function Page() {
         );
     }
 
-    const latestFeaturedPost = await client.fetch(featuredPostQuery);
+    const latestFeaturedPost = (await client.fetch(featuredPostQuery)) as Post;
     const latestPosts = (await client.fetch(
-        getPostsFromToQuery(0, 4)
+        getInitialPosts(latestFeaturedPost._id)
     )) as Post[];
     const totalAmountOfPosts = (await client.fetch(totalPosts)) as number;
 
@@ -34,7 +35,7 @@ export default async function Page() {
         <div className='flex flex-col justify-start items-center pb-5'>
             <Banner />
             <FeaturedSection post={latestFeaturedPost} />
-            <h2 className='text-2xl py-5'>Latest Posts</h2>
+            <h2 className='text-2xl font-bold py-5 mt-3'>Latest Posts</h2>
             <BlogList
                 latestPosts={latestPosts}
                 totalPosts={totalAmountOfPosts}
