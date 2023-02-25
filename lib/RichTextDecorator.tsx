@@ -7,15 +7,15 @@ export const RichTextDecorator = {
         image: ({ value }: any) => {
             return (
                 <>
-                    <div className='relative w-full h-100 mt-5 mx-auto overflow-hidden'>
+                    <div className='relative p-5 w-full h-64 sm:h-100 mt-5 mx-auto overflow-hidden'>
                         <Image
-                            className='object-cover'
+                            className='object-contain'
                             src={urlFor(value).url()}
                             alt={value.caption}
                             fill
                         />
                     </div>
-                    <p>{value.caption}</p>
+                    <p className='text-center'>{value.caption}</p>
                 </>
             );
         },

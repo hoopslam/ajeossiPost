@@ -31,7 +31,7 @@ async function Post({ params: { slug } }: Props) {
 
     return (
         <article className='px-10 pb-28 max-w-4xl mx-auto'>
-            <section className='relative min-h-[28rem] mt-4'>
+            <section className='relative h-64 sm:min-h-[28rem] mt-4'>
                 <div className='w-full h-full p-10'>
                     <Image
                         className='object-cover object-center mx-auto'
@@ -59,7 +59,9 @@ async function Post({ params: { slug } }: Props) {
                     ))}
                 </div>
             </section>
-            <h1 className='text-4xl font-extrabold my-5'>{post.title}</h1>
+            <h1 className='text-4xl font-extrabold mt-5 text-center'>
+                {post.title}
+            </h1>
 
             <PortableText
                 value={post.body}

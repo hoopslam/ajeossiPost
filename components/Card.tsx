@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import urlFor from '../lib/urlFor';
 import { Post } from '../typings';
-import { ArrowUpRightIcon } from '@heroicons/react/24/solid';
-import ChipButton, { ChipColor, ChipSize } from './ChipButton';
 
 interface Props {
     post: Post;
