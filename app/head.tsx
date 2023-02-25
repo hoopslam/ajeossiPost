@@ -1,7 +1,7 @@
 export default function Head() {
     return (
         <>
-            <title>David Ajeossi</title>
+            <title>The Ajeossi Post</title>
             <meta
                 content='width=device-width, initial-scale=1'
                 name='viewport'
