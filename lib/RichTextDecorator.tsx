@@ -32,9 +32,9 @@ export const RichTextDecorator = {
         h1: ({ children }: any) => (
             <h1 className='text-4xl py-5 font-bold'>{children}</h1>
         ),
-        h2: ({ children }: any) => (
-            <h2 className='text-4xl py-5 font-bold'>{children}</h2>
-        ),
+        h2: ({ children }: any) => {
+            return <h2 className='text-3xl py-5 font-bold'>{children}</h2>;
+        },
         h3: ({ children }: any) => (
             <h3 className='text-2xl py-5 font-bold'>{children}</h3>
         ),
@@ -65,7 +65,7 @@ export const RichTextDecorator = {
                     href={value.href}
                     target='_blank'
                     rel={'noreferrer noopener'}
-                    className='underlin'
+                    className='underline'
                 >
                     {children}
                 </a>

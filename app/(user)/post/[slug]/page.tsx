@@ -30,7 +30,7 @@ async function Post({ params: { slug } }: Props) {
     const post: Post = await client.fetch(postQuery, { slug });
 
     return (
-        <article className='px-10 pb-28 max-w-4xl mx-auto'>
+        <article className='px-10 pb-28 max-w-3xl mx-auto'>
             <section className='relative h-64 sm:min-h-[28rem] mt-4'>
                 <div className='w-full h-full p-10'>
                     <Image
