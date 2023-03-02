@@ -23,12 +23,12 @@ function FeaturedSection({ post }: Props) {
                     />
                 </ClientSideRoute>
             </div>
-            <div className='flex flex-col items-start justify-start px-5 py-3 lg:basis-1/3 sm:p-10 xl:p-0 xl:ml-10'>
+            <div className='flex flex-col items-start justify-start px-5 py-3 lg:basis-1/3 xl:ml-10'>
                 <ClientSideRoute
                     key={post._id}
                     route={`/post/${post.slug.current}`}
                 >
-                    <h1 className='text-3xl font-bold py-2 sm:text-6xl'>
+                    <h1 className='text-3xl font-bold py-2 sm:text-5xl'>
                         {post.title}
                     </h1>
                     <p className='text-xl text-gray-500 sm:text-lg'>
