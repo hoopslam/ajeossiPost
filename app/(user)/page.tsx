@@ -14,7 +14,7 @@ import { Post } from '../../typings';
 import Banner from '../../components/Banner';
 import FeaturedSection from '../../components/FeaturedSection';
 
-export const revalidate = 86400; ////prebuild static pages once every (1 day) 86400 seconds
+export const revalidate = 14400; ////prebuild static pages once every (4 hours)
 
 export default async function Page() {
     if (previewData()) {
