@@ -4,7 +4,12 @@ function Footer() {
             <p className='font-yellowtail'>
                 &#169; {` David Cho ${new Date().getFullYear()}`}
             </p>
-            <p>For inquiries: hoopslam@gmail.com</p>
+            <p>
+                For inquiries:{' '}
+                <a href='mailto: davidchocode@gmail.com'>
+                    davidchocode@gmail.com
+                </a>
+            </p>
         </div>
     );
 }
