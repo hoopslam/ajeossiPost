@@ -24,12 +24,13 @@ function ChipButton(props: Props) {
     } = props;
 
     return (
-        <button
+        //TODO: refactor to button once tag functionality is implemented
+        <div
             className={`${color} ${size} ml-1 mb-1 text-sm md:text-base text-white flex items-center rounded-full text-center`}
             onClick={onClick}
         >
             {children}
-        </button>
+        </div>
     );
 }
 
