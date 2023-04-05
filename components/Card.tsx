@@ -8,8 +8,8 @@ interface Props {
 
 function Card({ post }: Props) {
     return (
-        <div className='flex group cursor-pointer flex-col'>
-            <div className='relative w-full h-64 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out sm:h-80'>
+        <div className='flex group cursor-pointer flex-col overflow-hidden'>
+            <div className='relative w-full h-64 drop-shadow-xl group-hover:scale-110 transition-transform duration-[8000ms] ease-[cubic-bezier(0.25, 0.46, 0.45, 0.94)] sm:h-80'>
                 <Image
                     className='object-cover object-left lg:object-center'
                     src={urlFor(post.mainImage).url()}
