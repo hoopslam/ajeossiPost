@@ -18,7 +18,7 @@ function FeaturedSection({ post }: Props) {
                     <Image
                         className='object-cover object-left lg:object-center'
                         src={urlFor(post.mainImage).url()}
-                        alt={post.author.name}
+                        alt={post.title}
                         fill
                     />
                 </ClientSideRoute>
